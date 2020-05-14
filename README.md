@@ -21,6 +21,17 @@ Essentially, audio files are sequences of data, so the foundational techniques a
 Hardware:
 - 1x Nvidia Titan RTX graphics card with 24gb of GDDR6 memory. The cluster had 4, but I was allocated one for the duration of the project. 
 
+Requirements:
+- Python 3.x
+- Tensorflow 
+- ffmpeg
+- numpy
+- Keras
+- pandas
+- pydub
+- pickle
+- scipy
+
 ### Building a Music GAN
 My first step was to design a GAN that used LSTMs (Long-Short Term Memory) layers in both the generator and discrimator components of the GAN. My plan was to get the network working, then scale it up to the problem set. However, I ran into some issues here with Tensorflow itself. Tensorflow's train_on_batch function, which was essential to how I had set up the GAN, gave an error when I attempted to run it with the Titan RTX. After a few hours debugging, I switched approaches from build a GAN, then make it work on music, to make a simple music model, then make it into a GAN. I never made it far enough to come back to the GAN concept.
 
