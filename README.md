@@ -51,6 +51,9 @@ savepath is where to save them.
 You will need to make one additional change to the file itself. Line 48 contains the path to the seed data. Replace that with a path to the data you want to be used to seed the audio.
 
 
+#### Pre Trained Models
+My attempts training this model can be found in regressive_1/models
+
 ### Another Regressive Model
 At this point, I shrunk my goal again and set a goal of merely implementing anything that generated realistic music. I found code from Padmaja Bhagwat, an Indian developer, that uses a regressive model for generating audio. 
 
@@ -97,6 +100,9 @@ To use train_model_generator, which works off a far larger dataset, follow these
 
 2. Update train_model_generator to include the new data paths and correct bitrate. Execute using hte same commands as train_model.py.
 
+#### Pre Trained Models
+Examples of each of these three types of regressive_2 models can be found in the project sharepoint folder (too large to upload to git). 
+The overfitted model is named overfitted_regressive_1.h5. My failed attempt to make the model work by predicting one block is named failed_modification_regressive.h5. The attempt to generalize the model is named, predictably, generalized_regressive_2.h5.
 
 ### Conclusion
 By the end of this adventure, I realized a few things about my earlier approaches.
