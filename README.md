@@ -43,6 +43,7 @@ This model attempts to take an audio file and create a model that generates a so
 2. As I learned later, the models were simply not large enough to learn to make music.
 
 Sample results are in regressive_1/results. The file recurrent4.wav is the best demo of the network, though even it just creates a high-pitched whine. 
+
 ![Initial Regression Model](https://github.com/westpoint-neural-networks/final-project-bobby060/blob/master/images/regression1_model.png?raw=true)
 
 
