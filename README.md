@@ -24,7 +24,7 @@ Hardware:
 ### Building a Music GAN
 My first step was to design a GAN that used LSTMs (Long-Short Term Memory) layers in both the generator and discrimator components of the GAN. My plan was to get the network working, then scale it up to the problem set. However, I ran into some issues here with Tensorflow itself. Tensorflow's train_on_batch function, which was essential to how I had set up the GAN, gave an error when I attempted to run it with the Titan RTX. After a few hours debugging, I switched approaches from build a GAN, then make it work on music, to make a simple music model, then make it into a GAN. I never made it far enough to come back to the GAN concept.
 
-<Insert model summary>
+![GAN Model](https://github.com/westpoint-neural-networks/final-project-bobby060/blob/master/images/gan.png?raw=true)
 
 ### A basic regressive music generator
 This model attempts to take an audio file and create a model that generates a solution one sample at a time. Ultimately, it fails to create anything remotely resembling music, for several reasons. I loosely based this model of of this article: https://medium.com/intel-student-ambassadors/music-generation-using-lstms-in-keras-9ded32835a8f
@@ -32,7 +32,7 @@ This model attempts to take an audio file and create a model that generates a so
 2. As I learned later, the models were simply not large enough to learn to make music.
 
 Sample results are in regressive_1/results. The file recurrent4.wav is the best demo of the network, though even it just creates a high-pitched whine. 
-<Insert model summary, training results>
+![Initial Regression Model](https://github.com/westpoint-neural-networks/final-project-bobby060/blob/master/images/regression1_model.png?raw=true)
 
 
 #### Execution
@@ -60,7 +60,7 @@ Another key feature of their design was using a Fast Fourier Transform(FFT) to b
 
 It takes an input of a ten block sequence, and then output another ten block sequence, that included the last 9 blocks of input plus the predicted next block. 
 
-<Insert model summary>
+![Final regression model](https://github.com/westpoint-neural-networks/final-project-bobby060/blob/master/images/regression2_model.png?raw=true)
 
 The resulting model had nearly 200 million parameters. I verified the general concept of the model by intentionally overtraining it on 6 YoYo Ma cello songs, the result are in the folder regressive2/results.
 model1_song2.wav is the result of training the network for 1000epochs.
