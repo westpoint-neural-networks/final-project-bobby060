@@ -122,6 +122,10 @@ By the end of this adventure, I realized a few things about my earlier approache
 
 2. I approached the problem in the wrong order. Rather than going from hard (GAN) to easy (Copying a regressive model), I should have started the other way around. This misconstrued approach was mostly due to my shallow understanding of sequence generation with neural networks for the first few months of the semester. Ironically, now that the semester is ended and the project is done, I feel as if I have enough knowledge to actually attempt to start the project anew.
 
+3. Fast Fourier Transform and chunking allows processing longer sequences in frequency space without losing temporality.Very valuable preprocessing step.
+
+4. Audio training takes a long time. Allow for it in the planning process.
+
 
 
 
